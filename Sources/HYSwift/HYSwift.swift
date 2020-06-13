@@ -3,14 +3,14 @@ import UIKit
 let kScreenWidth = UIScreen.main.bounds.width
 let kScreenHeight = UIScreen.main.bounds.height
 
-class HYSwift {
+public class HYSwift {
     
     /// Convert a 6 digit hexadecimal string into a UIColor instance
     /// - Parameters:
     ///   - hex: 6 digit hexadecimal string may or may not start with #, eg: "ff0000", "#00ff00"
     ///   - alpha: a value between 0 ~ 1.0
     /// - Returns: a UIColor instance
-    static func colorFrom(hex: String, alpha: CGFloat = 1) -> UIColor? {
+    public static func colorFrom(hex: String, alpha: CGFloat = 1) -> UIColor? {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) { cString.removeFirst() }
         if ((cString.count) != 6) {
