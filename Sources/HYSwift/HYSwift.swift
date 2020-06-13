@@ -1,7 +1,8 @@
 import UIKit
 
-let kScreenWidth = UIScreen.main.bounds.width
-let kScreenHeight = UIScreen.main.bounds.height
+public let kScreenWidth = UIScreen.main.bounds.width
+public let kScreenHeight = UIScreen.main.bounds.height
+public let kScreenBounds = UIScreen.main.bounds
 
 public class HYSwift {
     
