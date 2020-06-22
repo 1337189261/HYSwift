@@ -9,11 +9,11 @@ import Foundation
 
 extension Array where Element: Collection {
     
-    var row: Int {
+    public var row: Int {
         return count
     }
     
-    var column: Int? {
+    public var column: Int? {
         if isEmpty {
             return nil
         }
