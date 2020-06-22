@@ -15,3 +15,13 @@ public func SwiftClassFromString(_ className: String) -> AnyClass? {
     let bundleName = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
     return NSClassFromString(bundleName + "." + className)
 }
+
+public func HYLog(_ message: String, file: String = #file, method: String = #function, line: Int = #line) {
+    #if DEBUG
+    print("\(file)[\(line)],\n \(method):\(message)");
+    #endif
+}
+
+public func HYAbstractMethod() {
+    fatalError("This is an abstract method which should be implemented in subclasses")
+}
