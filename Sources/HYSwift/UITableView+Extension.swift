@@ -17,17 +17,10 @@ extension UITableView {
     public func dequeReusableCell<T: UITableViewCell>() -> T {
         return dequeueReusableCell(withIdentifier: String(describing: T.self)) as! T
     }
-}
-
-extension UICollectionView {
     
-    public func register(_ cellClass: AnyClass) {
-        register(cellClass, forCellWithReuseIdentifier: String(describing: cellClass))
+    public func commonSetup(target: UITableViewDelegate & UITableViewDataSource) {
+        delegate = target
+        dataSource = target
+        separatorStyle = .none
     }
-    
-    /// 需要指定返回值类型
-    public func dequeReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as! T
-    }
-    
 }
