@@ -9,7 +9,7 @@ import UIKit
 /// UIKit 方法的简化版本
 extension UITableView {
     
-    public func register(cellClass: AnyClass) {
+    public func register(_ cellClass: AnyClass) {
         register(cellClass, forCellReuseIdentifier: String(describing: cellClass))
     }
     
@@ -21,7 +21,7 @@ extension UITableView {
 
 extension UICollectionView {
     
-    public func register(cellClass: AnyClass) {
+    public func register(_ cellClass: AnyClass) {
         register(cellClass, forCellWithReuseIdentifier: String(describing: cellClass))
     }
     
