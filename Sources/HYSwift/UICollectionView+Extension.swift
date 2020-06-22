@@ -9,6 +9,10 @@ import UIKit
 
 extension UICollectionView {
     
+    public static func create() -> UICollectionView {
+        return UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
     public func register(_ cellClass: AnyClass) {
         register(cellClass, forCellWithReuseIdentifier: String(describing: cellClass))
     }
@@ -24,6 +28,10 @@ extension UICollectionView {
         backgroundColor = .white
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
+        if #available(iOS 11.0, *) {
+            contentInsetAdjustmentBehavior = .never
+        }
+        
     }
     
     public var flowLayout: UICollectionViewFlowLayout {

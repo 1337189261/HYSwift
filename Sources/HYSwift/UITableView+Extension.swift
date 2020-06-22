@@ -9,6 +9,10 @@ import UIKit
 /// UIKit 方法的简化版本
 extension UITableView {
     
+    public static func create() -> UITableView {
+        return UITableView(frame: .zero)
+    }
+    
     public func register(_ cellClass: AnyClass) {
         register(cellClass, forCellReuseIdentifier: String(describing: cellClass))
     }
