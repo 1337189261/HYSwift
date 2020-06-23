@@ -7,17 +7,14 @@
 
 import Foundation
 
-public func readJSON(fileName: String) -> [String: AnyObject] {
+public func readJSON(fileName: String) -> Data {
     if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
         do {
               let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-              let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-              if let jsonResult = jsonResult as? Dictionary<String, AnyObject> {
-                  return jsonResult
-              }
+              return data
           } catch {
                print(error)
           }
     }
-    return [:]
+    return nil
 }
