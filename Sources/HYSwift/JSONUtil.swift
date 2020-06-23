@@ -16,5 +16,5 @@ public func readJSON(fileName: String) -> Data {
                print(error)
           }
     }
-    return nil
+    return Data()
 }
