@@ -22,9 +22,17 @@ extension UITableView {
         return dequeueReusableCell(withIdentifier: String(describing: T.self)) as! T
     }
     
-    public func commonSetup(target: UITableViewDelegate & UITableViewDataSource) {
+    public func commonSetup() {
+        separatorStyle = .none
+    }
+    
+    public func set(target: UITableViewDelegate & UITableViewDataSource) {
         delegate = target
         dataSource = target
-        separatorStyle = .none
+    }
+    
+    public func rowHeight(_ height: CGFloat) -> UITableView {
+        rowHeight = height
+        return self
     }
 }

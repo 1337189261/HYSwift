@@ -22,16 +22,18 @@ extension UICollectionView {
         return dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as! T
     }
     
-    public func commonSetup(target: UICollectionViewDelegate & UICollectionViewDataSource) {
-        delegate = target
-        dataSource = target
+    public func commonSetup() {
         backgroundColor = .white
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
         if #available(iOS 11.0, *) {
             contentInsetAdjustmentBehavior = .never
         }
-        
+    }
+    
+    public func set(target: UICollectionViewDelegate & UICollectionViewDataSource) {
+        delegate = target
+        dataSource = target
     }
     
     public var flowLayout: UICollectionViewFlowLayout {
