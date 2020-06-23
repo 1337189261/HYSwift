@@ -7,8 +7,12 @@
 
 import UIKit
 
-public func setupInitial(window:inout UIWindow?, rootViewController: UIViewController) {
+public func setupInitial(window:inout UIWindow?, rootViewController: UIViewController, withNavigation: Bool) {
     window = UIWindow(frame: kScreenBounds)
-    window?.rootViewController = rootViewController
+    if withNavigation {
+        window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+    } else {
+        window?.rootViewController = rootViewController
+    }
     window?.makeKeyAndVisible()
 }

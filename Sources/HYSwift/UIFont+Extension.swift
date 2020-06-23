@@ -10,6 +10,7 @@ import UIKit
 extension UIFont {
     static let `default` = UIFont.systemFont(ofSize: UIFont.systemFontSize)
     
+    @available(iOS 8.2, *)
     static func pingFangSC(weight: Weight, size: CGFloat = UIFont.systemFontSize) -> UIFont? {
         let weightStr: String
         switch weight {

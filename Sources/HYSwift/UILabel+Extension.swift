@@ -37,5 +37,9 @@ extension UILabel {
         return text.boundingRect(with: CGSize(width: .greatestFiniteMagnitude, height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: UIFont.systemFontSize)], context: nil).width
     }
     
+    @objc public static func label(size: CGFloat, hex: String) -> UILabel {
+        return label(text: nil, font: UIFont.systemFont(ofSize: size), color: UIColor.from(hex: hex) ?? UIColor.black)
+    }
+    
 }
 
