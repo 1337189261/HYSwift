@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+public let test = "test"
 
 /// 根据名字得到得到一个 Swift 类
 /// - Parameter className: 自定义的 Swift 类名
