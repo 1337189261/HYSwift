@@ -47,6 +47,9 @@ extension UIViewController {
     }
     
     public class var navController: UINavigationController? {
+        if let nav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+            nav
+        }
         return UIApplication.shared.keyWindow?.rootViewController?.navigationController
     }
 }
