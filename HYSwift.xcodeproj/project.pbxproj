@@ -27,6 +27,8 @@
 		5362F76A24A1192E00BE4263 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362F76924A1192E00BE4263 /* UICollectionView+Extension.swift */; };
 		5362F76C24A12C6500BE4263 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362F76B24A12C6500BE4263 /* UIFont+Extension.swift */; };
 		5375D14A249F6442007DCCCA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375D149249F6442007DCCCA /* Array+Extension.swift */; };
+		538B36F324A6514700DBC173 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538B36F224A6514700DBC173 /* NameSpace.swift */; };
+		538B36F524A65F6400DBC173 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538B36F424A65F6400DBC173 /* Chainable.swift */; };
 		53CC605124A2654A00C1CC58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CC605024A2654A00C1CC58 /* String+Extension.swift */; };
 		53CC605324A266D300C1CC58 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CC605224A266D300C1CC58 /* JSONUtil.swift */; };
 		53D1136C24A1CBEE00B5D7B6 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1136B24A1CBEE00B5D7B6 /* UIWindow+Extension.swift */; };
@@ -66,6 +68,8 @@
 		5362F76924A1192E00BE4263 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		5362F76B24A12C6500BE4263 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		5375D149249F6442007DCCCA /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		538B36F224A6514700DBC173 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
+		538B36F424A65F6400DBC173 /* Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
 		53CC605024A2654A00C1CC58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		53CC605224A266D300C1CC58 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
 		53D1136B24A1CBEE00B5D7B6 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		53D1D1A024950DE300937B73 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		53F4ACFC2495FF2B00CE0B0F /* HYSwiftNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYSwiftNetworkingTests.swift; sourceTree = "<group>"; };
 		"HYSwift::HYSwift::Product" /* HYSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HYSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"HYSwift::HYSwiftTests::Product" /* HYSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"HYSwift::HYSwiftTests::Product" /* HYSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = HYSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* HYColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HYColorTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				53D1136B24A1CBEE00B5D7B6 /* UIWindow+Extension.swift */,
 				53CC605024A2654A00C1CC58 /* String+Extension.swift */,
 				53CC605224A266D300C1CC58 /* JSONUtil.swift */,
+				538B36F224A6514700DBC173 /* NameSpace.swift */,
+				538B36F424A65F6400DBC173 /* Chainable.swift */,
 			);
 			name = HYSwift;
 			path = Sources/HYSwift;
@@ -256,8 +262,10 @@
 			buildActionMask = 0;
 			files = (
 				53D1D19B24950C5A00937B73 /* UIViewController+Extension.swift in Sources */,
+				538B36F524A65F6400DBC173 /* Chainable.swift in Sources */,
 				53D1D19F24950C9000937B73 /* SwiftUtil.swift in Sources */,
 				OBJ_23 /* UIColor+Extension.swift in Sources */,
+				538B36F324A6514700DBC173 /* NameSpace.swift in Sources */,
 				5362F76824A110B200BE4263 /* UIImage+Extension.swift in Sources */,
 				5375D14A249F6442007DCCCA /* Array+Extension.swift in Sources */,
 				53D1136C24A1CBEE00B5D7B6 /* UIWindow+Extension.swift in Sources */,
@@ -431,7 +439,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HYSwift.xcodeproj/HYSwiftTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
@@ -456,7 +464,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HYSwift.xcodeproj/HYSwiftTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";

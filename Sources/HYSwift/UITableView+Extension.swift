@@ -13,24 +13,32 @@ extension UITableView {
         return UITableView(frame: .zero)
     }
     
-    public func register(_ cellClass: AnyClass) {
+    @discardableResult
+    public func register(_ cellClass: AnyClass) -> UITableView {
         register(cellClass, forCellReuseIdentifier: String(describing: cellClass))
+        return self
     }
     
     /// 需要指定返回值类型
+    @discardableResult
     public func dequeReusableCell<T: UITableViewCell>() -> T {
         return dequeueReusableCell(withIdentifier: String(describing: T.self)) as! T
     }
     
-    public func commonSetup() {
+    @discardableResult
+    public func commonSetup() -> UITableView {
         separatorStyle = .none
+        return self
     }
     
-    public func set(target: UITableViewDelegate & UITableViewDataSource) {
+    @discardableResult
+    public func set(target: UITableViewDelegate & UITableViewDataSource) -> UITableView {
         delegate = target
         dataSource = target
+        return self
     }
     
+    @discardableResult
     public func rowHeight(_ height: CGFloat) -> UITableView {
         rowHeight = height
         return self

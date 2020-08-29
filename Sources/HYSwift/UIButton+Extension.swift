@@ -39,4 +39,27 @@ extension UIButton {
         ret.addTarget(target, action: selector, for: .touchUpInside)
         return ret
     }
+    
+    public typealias ActionBlock = (UIButton) -> Void
+    static var actionBlockKey = "ActionBlockKey"
+    
+    @discardableResult
+    public func actionBlock(_ block: @escaping ActionBlock) -> UIButton {
+        objc_setAssociatedObject(self, &UIButton.actionBlockKey, ClosureContainer(block: block), .OBJC_ASSOCIATION_RETAIN)
+        addTarget(self, action: #selector(performAction), for: .touchUpInside)
+        return self
+    }
+    
+    @objc func performAction() {
+        if let container = objc_getAssociatedObject(self, &UIButton.actionBlockKey) as? ClosureContainer<ActionBlock> {
+            container.block(self)
+        }
+    }
+}
+
+@objcMembers class ClosureContainer<BlockType>: NSObject {
+    var block: BlockType
+    init(block: BlockType) {
+        self.block = block
+    }
 }

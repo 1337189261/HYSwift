@@ -36,11 +36,40 @@ extension UILabel {
     @objc public static func widthWith(text: String, height: CGFloat, font: UIFont?) -> CGFloat {
         return text.boundingRect(with: CGSize(width: .greatestFiniteMagnitude, height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: UIFont.systemFontSize)], context: nil).width
     }
-    
+
     @available(iOS 8.2, *)
     @objc public static func label(size: CGFloat, weight: UIFont.Weight = .regular, hex: String) -> UILabel {
         return label(text: nil, font: UIFont.systemFont(ofSize: size, weight: weight ), color: UIColor.from(hex: hex) ?? UIColor.black)
     }
     
+    public func font(name: String, size: CGFloat) -> UILabel {
+        font = UIFont(name: name, size: size)
+        return self
+    }
+    
+    public func systemFont(of size: CGFloat) -> UILabel {
+        font = UIFont.systemFont(ofSize: size)
+        return self
+    }
+    
+    public func font(_ font: UIFont) -> UILabel {
+        self.font = font
+        return self
+    }
+    
+    public func text(_ text: String) -> UILabel {
+        self.text = text
+        return self
+    }
+    
+    public func color(_ color: UIColor) -> UILabel {
+        self.textColor = color
+        return self
+    }
+    
+    public func color(hex: String) -> UILabel {
+        textColor = UIColor.from(hex: hex)
+        return self
+    }
 }
 

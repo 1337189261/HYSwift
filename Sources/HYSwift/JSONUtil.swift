@@ -7,14 +7,14 @@
 
 import Foundation
 
-public func readJSON(fileName: String) -> Data {
+public func readJSON(fileName: String) -> Data?{
     if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
         do {
-              let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-              return data
-          } catch {
-               print(error)
-          }
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            return data
+        } catch {
+            print(error)
+        }
     }
-    return Data()
+    return nil
 }

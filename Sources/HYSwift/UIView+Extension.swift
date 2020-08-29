@@ -16,4 +16,48 @@ extension UIView {
         layer.shadowRadius = blur / 2
         layer.shadowOpacity = opacity
     }
+    
+    @discardableResult
+    public func add(subView: UIView) -> UIView {
+        addSubview(subView)
+        return self
+    }
+    
+    @discardableResult
+    public func backgroundColor(color: UIColor?) -> UIView {
+        backgroundColor = color
+        return self
+    }
+    
+    @discardableResult
+    public func frame(_ frame: CGRect) -> UIView {
+        self.frame = frame
+        return self
+    }
+    
+    @discardableResult
+    public func add(to superview: UIView) -> UIView {
+        superview.addSubview(self)
+        return self
+    }
+    
+    @discardableResult
+    public func borderColor(_ color: UIColor) -> UIView {
+        layer.borderColor = color.cgColor
+        return self
+    }
+    
+    @discardableResult
+    public func borderWidth(_ width: CGFloat) -> UIView {
+        layer.borderWidth = width
+        return self
+    }
+    
+//    @discardableResult
+//    func layout(snapKitMaker: (ConstraintMaker) -> Void) -> UIView {
+//        self.snp.makeConstraints { (make) in
+//            snapKitMaker(make)
+//        }
+//        return self
+//    }
 }
